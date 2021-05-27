@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :messages
   resources :likes
   resources :users
   resources :sessions
+  resources :profiles
+
 
   resources :users, only: [:create, :show, :index] do
    resources :profiles
+   resources :likes
  end
 
 

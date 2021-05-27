@@ -17,6 +17,8 @@ gem 'puma', '~> 5.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Gemfile
+
 
 
 # Use Active Storage variant
@@ -43,3 +45,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "active_model_serializers", "~> 0.10.12"
+
+gem "carrierwave", "~> 2.2"

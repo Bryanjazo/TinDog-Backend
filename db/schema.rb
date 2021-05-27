@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_21_011104) do
+ActiveRecord::Schema.define(version: 2021_05_27_021958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,15 +44,15 @@ ActiveRecord::Schema.define(version: 2021_05_21_011104) do
   end
 
   create_table "likes", force: :cascade do |t|
-    t.bigint "users_id"
-    t.bigint "conversations_id"
-    t.integer "supper_like"
-    t.integer "like"
-    t.integer "dislike"
+    t.bigint "user_id"
+    t.bigint "profile_id"
+    t.boolean "like"
+    t.boolean "super_like"
+    t.boolean "dislike"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["conversations_id"], name: "index_likes_on_conversations_id"
-    t.index ["users_id"], name: "index_likes_on_users_id"
+    t.index ["profile_id"], name: "index_likes_on_profile_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -63,13 +63,14 @@ ActiveRecord::Schema.define(version: 2021_05_21_011104) do
   create_table "profiles", force: :cascade do |t|
     t.string "name"
     t.integer "age"
-    t.boolean "member"
     t.string "gender"
     t.string "interest"
     t.string "bio"
+    t.integer "profile_index", default: 0
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "image"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 

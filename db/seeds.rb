@@ -6,14 +6,21 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Profile.create(name:"jkf nf", age: 21, bio:"jsnfnkjslf", gender:"m", image:"max.jpg", interest: "female", member:"lkfmnlkdsn", user_id: 1)
-Profile.create(name:"jkf nf", age: 21, bio:"jsnfnkjslf", gender:"m", image:"https://unsplash.com/photos/RfoISVdKM4U", interest: "female", member:"lkfmnlkdsn", user_id: 1)
-Profile.create(name:"jkf nf", age: 21, bio:"jsnfnkjslf", gender:"m", image:"https://unsplash.com/photos/RfoISVdKM4U", interest: "female", member:"lkfmnlkdsn", user_id: 1 )
-Profile.create(name:"jkf nf", age: 21, bio:"jsnfnkjslf", gender:"m", image:"https://unsplash.com/photos/RfoISVdKM4U", interest: "female", member:"lkfmnlkdsn", user_id: 1)
-Profile.create(name:"jkf nf", age: 21, bio:"jsnfnkjslf", gender:"m", image:"https://unsplash.com/photos/RfoISVdKM4U", interest: "female", member:"lkfmnlkdsn", user_id: 1)
-Profile.create(name:"jkf nf", age: 21, bio:"jsnfnkjslf", gender:"m", image:"https://unsplash.com/photos/RfoISVdKM4U", interest: "female", member:"lkfmnlkdsn", user_id: 1)
+bryan = Profile.create(name: "bryan", age: 21, bio:"bryan", image:"https://i.ibb.co/bzTNjYh/derick-mckinney-Qqv-TI5-Edc-unsplash.jpg", gender:"m", interest: "female", user_id: 1)
 
-User.create(username: "kk", email: "emasvil@gmail.com", password:"kkk")
-User.create(username: "kk", email: "emassil@gmail.com", password:"kkk")
-User.create(username: "kk", email: "emaissscsl@gmail.com", password:"kkk")
-User.create(username: "kk", email: "emaiscsl@gmail.com", password:"kkk")
+# bryan.image.attach(
+#   io: File.open('./public/images/man.png'),
+#   filename: 'man.png',
+#   content_type: 'application/png'
+# )
+
+# u = User.new
+# u.avatar = params[:file] # Assign a file like this, or
+
+# like this
+
+#
+# u.save!
+# u.avatar.url # => '/url/to/file.png'
+# u.avatar.current_path # => 'path/to/file.png'
+# u.avatar_identifier # => 'file.png'
